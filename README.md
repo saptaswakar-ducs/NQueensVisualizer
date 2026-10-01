@@ -212,6 +212,17 @@ bit = positions & (~positions + 1);
 
 **Limitation**
 - The current representation supports board sizes up to 63.
+
+## Algorithm Comparison
+| Feature | Standard | Optimized | Bitmask |
+|---|---|---|---|
+| Backtracking | Yes | Yes | Yes |
+| Column tracking | Direct scan | Array | Bitmask |
+| Diagonal tracking | Direct scan | Array | Bitmask |
+| Safety check | O(N) | O(1) | O(1)-style |
+| Candidate representation | Coordinates | Coordinates | Bits |
+
+All three algorithms should produce the same number of solutions for the same `N`.
   
 ## Solver Interface
 
@@ -314,29 +325,6 @@ Generation Time
 ```
 
 Generation time measures solver/event-generation time and does not include animation time.
-
-## Algorithm Comparison Mode
-
-The comparison mode runs all three algorithms without animation.
-
-Example:
-
-```text
-========================================================
-                 ALGORITHM COMPARISON
-========================================================
-
-Board Size: 10
-
-Algorithm                 Solutions     Calls       Time
---------------------------------------------------------
-Standard Backtracking     724           ...         ...
-Optimized Backtracking    724           ...         ...
-Bitmask                   724           ...         ...
---------------------------------------------------------
-```
-
-This demonstrates how different representations affect performance.
 
 ## Main Menu
 
