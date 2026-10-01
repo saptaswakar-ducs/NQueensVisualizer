@@ -1,0 +1,3 @@
+/Users/saptaswakar/Desktop/Git_Github/NQueensVisualizer/build/CMakeFiles/NQueensVisualizer.dir
+/Users/saptaswakar/Desktop/Git_Github/NQueensVisualizer/build/CMakeFiles/edit_cache.dir
+/Users/saptaswakar/Desktop/Git_Github/NQueensVisualizer/build/CMakeFiles/rebuild_cache.dir
